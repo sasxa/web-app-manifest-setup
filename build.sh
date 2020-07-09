@@ -1,7 +1,7 @@
 project=$1
 shift
 
-mkdir -p public/$project
+mkdir -p public/$project/worker
 
 cp src/assets/* public/$project/
 
