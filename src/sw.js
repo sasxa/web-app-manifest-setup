@@ -1,4 +1,4 @@
-const cacheName = "WAMS-v3";
+const cacheName = "WAMS-v4";
 
 const filesToCache = [
   "android-chrome-192x192.png",

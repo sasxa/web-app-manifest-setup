@@ -46,7 +46,7 @@
       function installServiceWorker() {
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker
-            .register("/sw.js")
+            .register("/worker/sw.js")
             .then(function (registration) {})
             .catch();
         }
