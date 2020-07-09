@@ -4,7 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:browser": "cp src/index.html public/browser/",
     "build:minimal": "cp src/index.html public/minimal/",
     "build:standalone": "cp src/index.html public/standalone/",
     "build:fullscreen": "cp src/index.html public/fullscreen/"
