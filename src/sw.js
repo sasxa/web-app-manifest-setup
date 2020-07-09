@@ -1,4 +1,4 @@
-const cacheName = "WAMS-v1";
+const cacheName = "WAMS-v2";
 
 const filesToCache = [
   "android-chrome-192x192.png",
@@ -14,7 +14,6 @@ const filesToCache = [
   "mstile-310x150.png",
   "mstile-310x310.png",
   "mstile-70x70.png",
-  "site.webmanifest",
 ];
 
 self.addEventListener("install", function (event) {
