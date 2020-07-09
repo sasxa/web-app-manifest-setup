@@ -15,5 +15,5 @@
   ],
   "theme_color": "#B86ED2",
   "background_color": "#2BD50B",
-  "display": "browser"
+  "display": "minimal-ui"
 }
