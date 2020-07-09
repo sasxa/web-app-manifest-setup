@@ -11,6 +11,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>html-head-title</title>
+    <style>
+      body {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        min-width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1 id="title"></h1>
+    <script>
+      document.getElementById("title").innerText = location.host;
+    </script>
+  </body>
 </html>
