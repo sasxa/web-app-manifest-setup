@@ -13,19 +13,32 @@
     <title>html-head-title</title>
     <style>
       body {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         min-width: 100vw;
         min-height: 100vh;
         margin: 0;
       }
+
+      h1,
+      h2 {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
     </style>
   </head>
   <body>
     <h1 id="title"></h1>
+    <h2 id="subtitle"></h2>
     <script>
-      document.getElementById("title").innerText = location.host;
+      const hostname = location.host;
+      document.getElementById("title").innerText = hostname.split("-")[0];
+      document.getElementById("subtitle").innerText = hostname;
     </script>
   </body>
 </html>
