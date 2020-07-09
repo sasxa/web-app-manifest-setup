@@ -6,10 +6,23 @@
 
 ### site.webmanifest file
 
-_"Add to Home Screen"_ requirements:
+**"Add to Home Screen"** requirements:
 
 - `background_color`
 - `display`
 - `icons`
 - `name/short_name`
 - `start_url`
+
+Instalable web site requirements:
+
+- "Add to Home Screen" requirements
+- HTTPS domain
+- device icon
+- service worker
+
+### Examples
+
+- [https://fullscreen-web-app-manifest-setup.netlify.app/](https://fullscreen-web-app-manifest-setup.netlify.app/)
+- [https://standalone-web-app-manifest-setup.netlify.app/](https://standalone-web-app-manifest-setup.netlify.app/)
+- [https://minimal-web-app-manifest-setup.netlify.app/](https://minimal-web-app-manifest-setup.netlify.app/)

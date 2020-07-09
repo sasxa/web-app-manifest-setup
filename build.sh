@@ -1,3 +1,14 @@
+project=$1
+shift
+
+mkdir -p public/$project
+
+cp src/assets/* public/$project/
+
+cp src/index.html public/$project/
+cp src/sw.js public/$project/
+
+echo $(cat <<- EOM
 {
   "name": "site-webmanifest-name",
   "short_name": "site-webmanifest-short_name",
@@ -15,6 +26,7 @@
   ],
   "theme_color": "#B86ED2",
   "background_color": "#2BD50B",
-  "start_url": "./",
-  "display": "fullscreen"
+  "display": "$project"
 }
+EOM
+) >> public/$project/site.webmanifest

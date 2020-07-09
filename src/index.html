@@ -40,6 +40,30 @@
       const hostname = location.host;
       document.getElementById("title").innerText = hostname.split("-")[0];
       document.getElementById("subtitle").innerText = hostname;
+
+      function installServiceWorker() {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then(function (registration) {})
+            .catch();
+        }
+      }
+
+      function uninstallServiceWorker() {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .getRegistrations()
+            .then(function (registrations) {
+              for (const reg of registrations) {
+                reg.unregister();
+              }
+            })
+            .catch();
+        }
+      }
+
+      installServiceWorker();
     </script>
   </body>
 </html>

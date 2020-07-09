@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:minimal": "cp src/index.html public/minimal/",
-    "build:standalone": "cp src/index.html public/standalone/",
-    "build:fullscreen": "cp src/index.html public/fullscreen/"
+    "build:minimal": "sh build.sh minimal-ui",
+    "build:standalone": "sh build.sh standalone",
+    "build:fullscreen": "sh build.sh fullscreen"
   }
 }
