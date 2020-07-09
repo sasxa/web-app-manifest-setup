@@ -2,7 +2,14 @@
 
 [Web app manifests](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 
+[How to make PWAs installable](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installable_PWAs)
+
 ### site.webmanifest file
 
-- `start_url` must be included
-- `scope` must be included
+_"Add to Home Screen"_ requirements:
+
+- `background_color`
+- `display`
+- `icons`
+- `name/short_name`
+- `start_url`
