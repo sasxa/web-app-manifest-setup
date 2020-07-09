@@ -16,22 +16,22 @@ const filesToCache = [
   "mstile-70x70.png",
 ];
 
-self.addEventListener("install", function (event) {
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(cacheName).then(function (cache) {
+    caches.open(cacheName).then((cache) => {
       cache.addAll(filesToCache);
     })
   );
 });
 
-self.addEventListener("fetch", function (event) {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then(function (cached) {
+    caches.match(event.request).then((cached) => {
       return (
         cached ||
-        fetch(event.request).then(function (response) {
-          return caches.open(cacheName).then(function (cache) {
-            cache.put(e.request, response.clone());
+        fetch(event.request).then((response) => {
+          return caches.open(cacheName).then((cache) => {
+            cache.put(event.request, response.clone());
             return response;
           });
         })
@@ -40,11 +40,11 @@ self.addEventListener("fetch", function (event) {
   );
 });
 
-self.addEventListener("activate", function (event) {
+self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then(function (keys) {
+    caches.keys().then((keys) => {
       return Promise.all(
-        keys.map(function (key) {
+        keys.map((key) => {
           if (key !== cacheName) {
             return caches.delete(key);
           }
