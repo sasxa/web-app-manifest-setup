@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <base href="./" />
+    <base href="/test/" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -46,7 +46,7 @@
       function installServiceWorker() {
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker
-            .register("/worker/sw.js")
+            .register("test/sw.js")
             .then(function (registration) {})
             .catch();
         }
